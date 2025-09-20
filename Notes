@@ -73,3 +73,79 @@ In ReactDOM using render for elments into the root
 
 EX:- const root = ReactDOM.createRoot(document.getElmentById("root"));
      root.render(heading); 
+
+/**
+ * 
+ * <div id = "parent">
+ *    <div id = "child">
+ *     <h1>I am h1 tag</h1>
+ *     <h2>I am h1 tag</h2>
+ *   </div>
+ * <div id = "child2">
+ *     <h1>I am h1 tag</h1>
+ *     <h2>I am h1 tag</h2>
+ *   </div>
+ * </div>
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
+EPISODE 02:-
+how to push a code into the git?
+first we need to create repo into the git
+after we following below steps
+git add README.md
+git init
+git branch -M main
+git commit -m "first commit"
+git add .
+git remote add origin https://github.com/gafoor8374/React-sep-2025.git
+git push -u origin main
+
+already git repo
+then you need following steps
+git init
+git commit -m "commitmeaage"
+git add .
+git push -u origin main
+
+
+what is NPM ?
+NPM is not particular name, but it is manages packages.
+
+we need npm init then it will be add a package.json in our project.
+In package.json is manages the what packages and what dependency of the packages into the our project
+
+how to install packages?
+ -- npm install -D parcel --
+one is dev dependecy
+another is normal dependency
+
+what is the package.json?
+package.json is the configuration of the package and that version.
+like:"parcel": "^2.16.0" here we are updating when ever install our NPM into the our project 
+
+what is the package-lock.json?
+package-lock.json is the keep track a exact version of the dependency of the packages.
+like: 
+"parcel": "^2.16.0"
+
+what is caret and tlide?
+Caret is " ^ " the increasing or updated automatically the minor or major versions of the packages.
+tlide is " ~ "  not updating anything it's standarad major version saving what ever into the package.json .
+
+what is the integrity?
+In a package-lock.json file, the integrity field holds a cryptographic hash (like SHA512) of a package's downloaded tarball or the commit hash for a Git dependency.
+Hashing: When a package is fetched from a registry, local source, or Git repository, a hash is generated for that specific file or commit. 
+
+what is trangentive dependency?
+Tragentive dependency means, if we are install one package like parcel, parcel will be automatically install other libraries, there own dependency like this way their own dependency have own dependenices install like all data into the node modules.
+
+how run a parcel?
+npx parcel index.html
+

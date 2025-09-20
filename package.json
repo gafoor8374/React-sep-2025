@@ -1,0 +1,26 @@
+{
+  "name": "new-react-sep-2025",
+  "version": "1.0.0",
+  "description": "This learning a React 2025",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gafoor8374/React-sep-2025.git"
+  },
+  "keywords": [],
+  "author": "Shaik Gafoor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gafoor8374/React-sep-2025/issues"
+  },
+  "homepage": "https://github.com/gafoor8374/React-sep-2025#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
