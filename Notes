@@ -1,0 +1,75 @@
+Episode 1:
+
+In first I have create basic html hello world.
+after that I have create basic javascript to run the hello world.
+
+Ex: 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️Learning New React😜</title>
+</head>
+<body>
+    <div id ="root">
+        <!-- <h1>Hello World! from basic html🤩.</h1>
+         <script>
+
+            const heading = document.createElement("h1");
+            heading.innerHTML = "Hello world! from JavaScript🏃🏽";
+
+            const root = document.getElementById("root");
+            root.appendChild(heading);
+         </script>
+    </div>
+</body>
+</html> -->
+
+Now I have insert a react into our project
+How to inject react into my project, so I have to using a CDN links copy and paste the CDN react links react will be into our project.
+
+Below are the CDN links:
+<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+This links have react and react-dom development.js then we using react now.
+
+first link we have core function of the react [text](https://unpkg.com/react@18/umd/react.development.js)
+Second link we manupulate the core function into the react [text](https://unpkg.com/react-dom@18/umd/react-dom.development.js)
+
+What is react?
+React is javascript library is end of the day.
+it's Normal javascript files.
+
+What is react-dom?
+ReactDOM is a core library in the react tools to ineract with the browser's document Object Model(DOM).
+
+ReactDOM is a core library in the React ecosystem that provides the necessary tools to interact with the browser's Document Object Model (DOM). While React itself is a JavaScript library for building user interfaces and can be used in various environments (like web, native mobile with React Native, or VR with React 360), ReactDOM specifically handles the rendering of React components into a web browser's DOM.
+
+What is crossorgin?
+
+Cross means interaction b/w the different domains.
+
+Example of a Cross-Origin Request
+Imagine your web application is on my-app.com, and you want to load a font from a different domain, like cdn.fonts.com. This is a cross-origin request. Without CORS headers from cdn.fonts.com, the browser would block the font from loading to prevent potential misuse.  
+
+
+where to use react ?
+React is using a creating something like element.
+ 1.how to create a element in react
+ In React we are using create a element like React.creatElement here we passing 3 parameter create a react object
+   1. what is creating like 'div', 'h1' tags etc.
+   2. empty object {}, in this empty object we are passing attributes tags id, name css file etc. {id:"heading"}
+   3. third parameter is passing a innerHTML like "Hello world!".
+
+EX:- const heading = React.createElment("h1", {}, "Hello world!) --> finally it return a javascrit object
+
+
+where to use react-dom?
+ReactDOM is using for render a elements like root.render
+
+In ReactDOM using render for elments into the root
+
+EX:- const root = ReactDOM.createRoot(document.getElmentById("root"));
+     root.render(heading); 
