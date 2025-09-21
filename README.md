@@ -19,3 +19,8 @@
 - Host your app in HTTPs
 - Tree Shaking - remove unused code from project
 - Build dev and production 
+
+
+## React Component ##
+1. Class Based Component => Old way
+2. Functional Component => New way

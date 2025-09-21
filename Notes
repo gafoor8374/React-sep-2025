@@ -147,5 +147,93 @@ what is trangentive dependency?
 Tragentive dependency means, if we are install one package like parcel, parcel will be automatically install other libraries, there own dependency like this way their own dependency have own dependenices install like all data into the node modules.
 
 how run a parcel?
-npx parcel index.html
+npx parcel index.html normal dev build
+npm parcel build index.html production build
+
+
+EPISODE03:-
+We are implement the scripts for the project in production and local machines
+How to implement the package.json?
+In package.json there is a scripts we need to implement the production and local dev mode
+EX:- here key and value will be placed in scripts here is the industry standared
+"scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html" 
+  },
+  once run the build
+   1. npm start or npm run start
+   2. npm run build is here run will added then it will build.
+
+React.createElement create a object => after render into the ReactDOM then it will be html elemnt
+
+EX:-
+<!-- const parent = React.createElement("div", { id: "parent" }, [
+    React.createElement("div", { id: "child", key:"childkey" }, [
+    React.createElement("h1",{id:"h1tag", key:"h1key"}, "I am an h1 tag"),
+    React.createElement("h2", {id:"h2tag", key:"h2key"}, "I am an h2 tag"),
+  ]),
+  React.createElement("div", { id: "child2", key:"child2key" }, [
+    React.createElement("h1",{id:"h1tag", key:"h1key"}, "I am an h1 tag"),
+    React.createElement("h2", {id:"h2tag", key:"h2key"}, "I am an h2 tag"),
+  ])
+]
+
+);
+
+console.log(parent);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(parent); -->
+
+--JSX--
+JSX is not HTML inside JS, but JSX HTML or XML likes syntax
+
+<!-- const jsxheading = <h1 clasName="head">Learning react 🥰</h1> -->
+Here attributes the passing camelcase
+
+JSX => BABEL is transfiled into the React.createElement => js object => render HTML element
+
+## React Component
+1. Class Based Component => Old way
+2. Functional Component => New way
+
+React Functional Component 
+It is normal JS function which return some JSX
+
+<!-- const HeadingComponent = () ={
+    return <h1>Learning form function Component </h1>
+} -->
+
+how to render a component?
+In functional component is rendering like this syntax:
+EX: root.render(<HeadingComponent />)
+
+What is component composition?
+Component compostion is there is render a one component into another component.
+
+<!-- const HeadingComponent = () =>(
+   <h1 id="heading">Learning React from JSX 🥰</h1>
+);
+
+const HeadingComponent2= () =>(
+   <div id="container">
+    <HeadingComponent />. here the Component Compostion
+    <h1 className ="heading">This is a Functional Component</h1>;
+   </div>
+) -->
+
+how to react elment inside the component?
+
+const HeadingComponent = (
+   <h1 id="heading">Learning React from JSX 🥰</h1>
+);
+
+const HeadingComponent2= () =>(
+   <div id="container">
+    { HeadingComponent } // here the React elemnent Compostion into the componnet 
+    In this bracket we are doing what ever js
+    <h1 className ="heading">This is a Functional Component</h1>;
+   </div>
+) 
 
