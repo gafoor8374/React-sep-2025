@@ -237,3 +237,72 @@ const HeadingComponent2= () =>(
    </div>
 ) 
 
+
+
+EPISODE04:-
+
+Build a project then plan first how to build app strudture need be imporatant
+<!--
+*Header
+ * logo
+ * Nav items
+*Body
+ * Search
+ * ResturantContainer
+  * RestroCard
+   - image
+   - Resturant Name, star rating, cuisine, time, rate etc
+
+*Footer 
+ * copy
+ * links
+ -->
+
+In react props will pass something.
+
+We will pass the arugument in dynamically through the component is called props
+EX: <ResturantCardList resname="Madhuram Tiffins" cusine="south Indian, BHEL" /> resname, cusine are props passing to the dynamically to the components.
+
+Passing a arrugument it wraping it like props
+
+props will be disructring like it
+
+const List = (props) =>{
+   here the props are to object coming form resname, cusine etc.
+
+   console.log(props);
+
+   de-struting the props 
+
+   const {resname, cuisine } = props;
+ return (
+     <h1>{props.resname}</h1>
+
+     when destruting using like this
+
+     <h2>{resname}</h2>
+ )
+}
+
+<ResturantCardList resname="Madhuram Tiffins" cusine="south Indian, BHEL" />
+
+const ResturantCardList = (props) =>{
+   // console.log(props);
+
+   const {resname, cusines, rating} = props; //destructuring
+   return (
+      <div className="res-card">
+         <img className="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2024/11/8/3b73a883-2a17-4756-a695-ea7fa84a1831_e753c47a-ee2a-4d53-a484-a78ee939e7b5.jpeg" />
+         <h3>{resname}</h3>
+         <h4>{cusines}</h4>
+         <h4>{rating}</h4>
+         <h4>{props.time}</h4>
+
+      </div>
+   )
+}
+
+What is config drivine UI?
+ data will drivine by config with different location control by then called config drivin UI.
+
+ When were use .map for array paasing key value.
