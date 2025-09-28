@@ -306,3 +306,122 @@ What is config drivine UI?
  data will drivine by config with different location control by then called config drivin UI.
 
  When were use .map for array paasing key value.
+
+ <div className="res-container">
+            {/* resturant list */}
+            {/* <ResturantCardList resData ={resList[0]}/>
+            <ResturantCardList resData ={resList[1]}/>
+            <ResturantCardList resData ={resList[2]}/>
+            <ResturantCardList resData ={resList[3]}/> */} {/*//Dynamic way to do it */}
+
+            {/* {Using to map for resturant list} */}
+            {resList.map((resturant) =>{
+               return <ResturantCardList key= {resturant.card.card.info.id} resData = {resturant} />
+            })}
+            
+         </div>
+
+
+EPISODE05:-
+
+React builds makes large scale application
+Make seperate files for every component.
+First export after import
+
+There is two type of import and export
+## default Export/Import
+export default => export deafult Header;
+import Componet or function  from "path";
+
+## Named Export/ Import
+export const componnet or function;
+import {component or function} from "path"
+ named export => export const variable or function
+
+
+
+## Hooks ##
+They are normal js utilities function
+
+There us two imporant hooks
+1. useState()
+2. useEffect()
+
+const [listOfResturant] = useState(); this is local state variable
+
+let listOfResturant; this normal variable
+
+## useState() ##
+When ever State variable is update ract will be automatically re-render the component UI.
+
+React use Reconciliation algorithm(React Fiber) 16th version
+
+Virtual Dom => it is not a normal DOM, it's representation of a original DOM
+
+Diff Algorithm => it's means
+
+import ResturantCardList from "./ResturantCardList";
+// import resList from "../Utilis/mockdata";
+import { useState } from "react";
+
+
+const Body = () =>{
+
+   const [listOfResturants, setListOfResturants] = useState([{
+    card: {
+      card: {
+        info: {
+          id: "160087",
+          name: "Varalakshmi Tiffins",
+          cloudinaryImageId:
+            "FOOD_CATALOG/IMAGES/CMS/2024/6/13/f75ee7b6-e503-450a-927b-4127ff08b728_d96ddc6b-5a48-4c4b-a413-c92e44355f0d.jpg",
+          costForTwo: "₹300 for two",
+          cuisines: ["South Indian"],
+          avgRating: 4.5,
+          sla: {
+            deliveryTime: 27,
+            lastMileTravel: 5.8,
+            serviceability: "SERVICEABLE",
+            slaString: "25-30 mins",
+            lastMileTravelString: "5.8 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+        },
+      },
+    },
+  },
+  },])
+
+
+   return (
+     <div className="body">
+       {/* <div className="search">Search</div> */}
+       <div className="filter">
+         <button
+           className="filter-btn"
+           onClick={() => {
+              let filterResturants = listOfResturants.filter((res)=>res.card.card.info.avgRating > 4)
+              console.log(listOfResturants);
+              setListOfResturants(filterResturants);
+            }
+           }
+         >
+           Fillter Restaurants
+         </button>
+       </div>
+
+       <div className="res-container">
+         {listOfResturants.map((resturant) => {
+           return (
+             <ResturantCardList
+               key={resturant.card.card.info.id}
+               resData={resturant}
+             />
+           );
+         })}
+       </div>
+     </div>
+   );
+}
+
+export default Body;
